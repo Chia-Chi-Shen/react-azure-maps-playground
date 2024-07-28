@@ -7,7 +7,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@mui/material": "^5.9.2",
-    "@storybook/addon-storysource": "^8.2.4",
+    "@testing-library/dom": "^10.4.0",
     "@types/jest": "24.0.19",
     "@types/node": "12.11.7",
     "@types/react": "^18.0.15",
@@ -29,13 +29,39 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --ext .js,.jsx,.tsx",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "start-storybook -p 6006 public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "plugin:storybook/recommended"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      },
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      },
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -53,21 +79,24 @@
   "devDependencies": {
     "@babel/runtime": "7.14.0",
     "@chromatic-com/storybook": "1.6.1",
-    "@storybook/addon-essentials": "^8.2.4",
-    "@storybook/addon-interactions": "^8.2.4",
-    "@storybook/addon-links": "^8.2.4",
-    "@storybook/addon-onboarding": "^8.2.4",
-    "@storybook/blocks": "^8.2.4",
-    "@storybook/preset-create-react-app": "^8.2.4",
-    "@storybook/react": "^8.2.4",
-    "@storybook/react-webpack5": "^8.2.4",
-    "@storybook/test": "^8.2.4",
+    "@storybook/addon-actions": "^6",
+    "@storybook/addon-essentials": "^6",
+    "@storybook/addon-interactions": "^6",
+    "@storybook/addon-links": "^6",
+    "@storybook/addon-storysource": "^8.2.4",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^6",
+    "@storybook/preset-create-react-app": "^4",
+    "@storybook/react": "^6",
+    "@storybook/testing-library": "^0.2.2",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss-normalize": "^10.0.1",
     "prettier": "^2.1.2",
-    "prop-types": "15.8.1",
-    "storybook": "^8.2.4",
-    "webpack": "5.93.0"
+    "prop-types": "^15.8.1",
+    "storybook": "^6.5.16",
+    "webpack": "^5.93.0"
   },
   "resolutions": {
     "immer": "^9.0.6",
