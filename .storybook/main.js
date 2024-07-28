@@ -6,6 +6,22 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
     '@storybook/addon-interactions',
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        sourceLoaderOptions: {
+          injectStoryParameters: false,
+        },
+      },
+    },
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        loaderOptions: {
+          injectStoryParameters: false,
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {
@@ -13,12 +29,6 @@ module.exports = {
   },
   features: {
     postcss: false,
-  },
-  refs: {
-    'design-system': {
-      title: 'Storybook Design System',
-      url: 'https://5ccbc373887ca40020446347-yldsqjoxzb.chromatic.com',
-    },
   },
   babel: async (options) => ({
     // Update your babel configuration here
