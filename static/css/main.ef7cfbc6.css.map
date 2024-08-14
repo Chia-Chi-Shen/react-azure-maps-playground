@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.ef7cfbc6.css","mappings":"AAAA;AACA;AACA;AACA;;AAEA;AACA;AACA","sources":["webpack://azure-maps-storybook/./src/Storybook.css"],"sourcesContent":[".defaultMap {\n  width: 700px;\n  height: 300px;\n}\n\n.atlas-map .azure-map-copyright a {\n  font-size: 9px;\n}\n"],"names":[],"sourceRoot":""}
